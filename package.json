@@ -1,10 +1,10 @@
 {
-  "name": "dhash",
+  "name": "browser-image-hash",
   "version": "0.0.1",
   "description": "Image to dhash for Browser",
-  "main": "dist/index.js",
+  "main": "dest/index.js",
   "files": [
-    "dist"
+    "dest"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
