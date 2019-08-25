@@ -72,7 +72,7 @@ export default class ImageMagickConverter implements HashableImageSouceConverter
             }
             img.onerror = reject;
 
-            img.src = URL.createObjectURL(convertResult.outputFiles[0].blob);
+            img.src = URL.createObjectURL(new Blob([convertResult.outputFiles[0].buffer || new ArrayBuffer(0)]));
         });
     }
 }
