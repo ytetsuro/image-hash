@@ -4,8 +4,9 @@
     "module": "es2015",
     "target": "es5",
     "sourceMap": true,
-    "outDir": "./dist",
-    "declaration": true
+    "outDir": "./dest",
+    "declaration": true,
+    "sourceMap": false
   },
   "exclude": [
     "node_modules",
