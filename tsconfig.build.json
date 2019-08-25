@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.ts"
+  ]
+}

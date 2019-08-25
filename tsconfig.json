@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "strict": true,
+    "lib": ["es2015", "dom", "es5"],
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "typeRoots": ["./src/types"],
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
