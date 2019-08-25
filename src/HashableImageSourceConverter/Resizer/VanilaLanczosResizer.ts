@@ -133,7 +133,7 @@ class Lanczos {
         return result;
     }
 }
-var afff =0;
+
 class RGBACreater {
     private srcData: Uint8ClampedArray;
     private a: Decimal;
@@ -164,10 +164,6 @@ class RGBACreater {
     }
 
     public create() {
-        if (afff === 0) {
-            afff++;
-        }
-
         return [
             this.red.div(this.a).round().toNumber(),
             this.green.div(this.a).round().toNumber(),
