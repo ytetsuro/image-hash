@@ -7,7 +7,7 @@
     "dest"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "rm -rf dest && tsc -p tsconfig.build.json",
     "prepare": "npm run build",
     "test": "jest"
   },
