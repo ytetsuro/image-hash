@@ -13,6 +13,12 @@ This library is made to generate the same hash as [image-hash](https://github.co
 * perception hashing ([pHash](http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html))
 * wavelet hashing ([wHash](https://fullstackml.com/2016/07/02/wavelet-image-hash-in-python/))
 
+## Installation
+
+```bash
+$ npm install browser-image-hash
+```
+
 ## Basic Using
 
 ```typescript
