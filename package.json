@@ -19,6 +19,14 @@
     "hashing"
   ],
   "author": "ytetsuro",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ytetsuro/image-hash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ytetsuro/image-hash/issues"
+  },
+  "homepage": "https://github.com/ytetsuro/image-hash#readme",
   "license": "MIT",
   "dependencies": {
     "@rgba-image/lanczos": "^0.1.0",
