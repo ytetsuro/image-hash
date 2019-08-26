@@ -32,4 +32,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-⚠️ Since this library uses canvas, please be careful of the same origin policy.[Allowing cross-origin use of images and canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image)
+⚠️ Since this library uses canvas, please be careful of the same origin policy.
+[Allowing cross-origin use of images and canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image)
