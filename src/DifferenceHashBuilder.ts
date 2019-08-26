@@ -18,7 +18,7 @@ export default class DifferenceHashBuilder {
         this.generator = new HashGenerator(document);
     }
 
-    public async generate(url: URL, hashSize: number = 8)
+    public async build(url: URL, hashSize: number = 8)
     {
         const source = new HashSource(url, hashSize);
         const hashableImageSouce = await this.dHashConverter.convert(source);
