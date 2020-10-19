@@ -6,7 +6,6 @@
     "lib": ["es2015", "dom", "es5"],
     "moduleResolution": "node",
     "downlevelIteration": true,
-    "typeRoots": ["./src/types"],
     "types": ["jest", "node"]
   },
   "include": [
