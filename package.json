@@ -4,10 +4,10 @@
   "description": "Image to dhash for Browser",
   "main": "dest/index.js",
   "files": [
-    "dest"
+    "dist"
   ],
   "scripts": {
-    "build": "rm -rf dest && tsc -p tsconfig.build.json",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "prepare": "npm run test && npm run build",
     "test": "jest"
   },
