@@ -1,6 +1,6 @@
 {
   "name": "browser-image-hash",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Image to dhash for Browser",
   "main": "dest/index.js",
   "files": [
