@@ -39,7 +39,7 @@
     "@types/decimal.js": "^7.4.0",
     "@types/jest": "^26.0.14",
     "@types/jsdom": "^16.2.4",
-    "@types/node": "^16.3.0",
+    "@types/node": "^17.0.13",
     "jest": "^27.0.6",
     "jsdom": "^16.4.0",
     "ts-jest": "^27.0.4",
