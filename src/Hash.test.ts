@@ -61,5 +61,27 @@ describe('Hash', () => {
 
             expect(String(hash)).toBe('');
         });
+
+        it('should get hexadecimal when bits length is not multiple of 4.', () => {
+            const hash = new Hash('101');
+
+            expect(String(hash)).toBe('5');
+        });
+    });
+
+    describe('getHammingDistance() edge cases', () => {
+        it('should return 0 when comparing identical hashes.', () => {
+            const hash = new Hash('01010101');
+            const same = new Hash('01010101');
+
+            expect(hash.getHammingDistance(same)).toBe(0);
+        });
+
+        it('should return full length when all bits differ.', () => {
+            const hash = new Hash('0000');
+            const opposite = new Hash('1111');
+
+            expect(hash.getHammingDistance(opposite)).toBe(4);
+        });
     });
 });

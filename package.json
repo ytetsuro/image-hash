@@ -7,9 +7,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "build": "tsup",
     "prepare": "npm run test && npm run build",
-    "test": "jest"
+    "test": "vitest run",
+    "test:browser": "vitest run --config vitest.browser.config.ts"
   },
   "keywords": [
     "image",
@@ -21,7 +22,7 @@
   "author": "ytetsuro",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:ytetsuro/image-hash.git"
+    "url": "https://github.com/ytetsuro/image-hash.git"
   },
   "bugs": {
     "url": "https://github.com/ytetsuro/image-hash/issues"
@@ -34,15 +35,16 @@
     "wasm-imagemagick": "^1.2.3"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-typescript": "^7.12.1",
+    "@swc/core": "^1.15.18",
     "@types/decimal.js": "^7.4.0",
-    "@types/jest": "^26.0.14",
     "@types/jsdom": "^16.2.4",
-    "@types/node": "^16.3.0",
-    "jest": "^27.0.6",
+    "@types/node": "^20.0.0",
+    "@vitest/browser": "^4.1.0",
+    "@vitest/browser-playwright": "^4.1.0",
     "jsdom": "^16.4.0",
-    "ts-jest": "^27.0.4",
-    "typescript": "^4.0.2"
+    "playwright": "^1.58.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
   }
 }
