@@ -1,5 +1,7 @@
-jest.mock('wasm-imagemagick', () => ({
-    call: jest.fn(() => {}),
+import { vi } from 'vitest';
+
+vi.mock('wasm-imagemagick', () => ({
+    call: vi.fn(() => {}),
 }));
 import { call } from 'wasm-imagemagick';
 import { JSDOM } from 'jsdom';
@@ -21,7 +23,7 @@ class DummyImage {
     }
 }
 
-let dummyFetch = jest.fn();
+let dummyFetch = vi.fn();
 
 describe('ImageMagickConverter', () => {
     describe('convert()', () => {
@@ -52,8 +54,8 @@ describe('ImageMagickConverter', () => {
                 return new DummyImage();
             };
             (<any>global).fetch = dummyFetch;
-            (<any>global).URL.createObjectURL = jest.fn(() => 'blob:http://example.com/hoge');
-            (<any>global).URL.revokeObjectURL = jest.fn();
+            (<any>global).URL.createObjectURL = vi.fn(() => 'blob:http://example.com/hoge');
+            (<any>global).URL.revokeObjectURL = vi.fn();
 
             const converter = new ImageMagickConverter(dom.window.document);
             const actual = await converter.convert(new HashSource(new URL('http://exmaple.com/foo.png'), 2));
@@ -90,8 +92,8 @@ describe('ImageMagickConverter', () => {
                 return new DummyImage();
             };
             (<any>global).fetch = dummyFetch;
-            (<any>global).URL.createObjectURL = jest.fn(() => 'blob:http://example.com/hoge');
-            (<any>global).URL.revokeObjectURL = jest.fn();
+            (<any>global).URL.createObjectURL = vi.fn(() => 'blob:http://example.com/hoge');
+            (<any>global).URL.revokeObjectURL = vi.fn();
 
             const converter = new ImageMagickConverter(dom.window.document);
             await converter.convert(new HashSource(new URL('data:image/png;base64,iVBOR'), 2));
