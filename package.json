@@ -2,7 +2,15 @@
   "name": "browser-image-hash",
   "version": "0.0.6",
   "description": "Image to dhash for Browser",
-  "main": "dist/index.js",
+  "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
