@@ -137,13 +137,43 @@ describe('HashGenerator', () => {
             const obj = new HashGenerator(dom.window.document);
 
             (<any>global).CanvasRenderingContext2D = DummyCanvasRenderingContext2D;
-            
+
             expect(() => {
                 obj.generate(
                     new HashSource(new URL('http://example.com'), 8),
-                    new Uint8ClampedArray() 
+                    new Uint8ClampedArray()
                 );
             }).toThrowError('Not convertable grayArray, convertable grayArray length is 72');
+        });
+
+        it('should get Hash with all zeros Uint8ClampedArray.', () => {
+            const dom = new JSDOM();
+            const obj = new HashGenerator(dom.window.document);
+            (<any>global).CanvasRenderingContext2D = DummyCanvasRenderingContext2D;
+
+            const allZeros = new Uint8ClampedArray(6).fill(0);
+            const actual = obj.generate(
+                new HashSource(new URL('http://example.com'), 2),
+                allZeros
+            );
+
+            expect(actual).toBeDefined();
+            expect(actual.rawHash).toBe('1111');
+        });
+
+        it('should get Hash with all same value Uint8ClampedArray.', () => {
+            const dom = new JSDOM();
+            const obj = new HashGenerator(dom.window.document);
+            (<any>global).CanvasRenderingContext2D = DummyCanvasRenderingContext2D;
+
+            const allSame = new Uint8ClampedArray(6).fill(128);
+            const actual = obj.generate(
+                new HashSource(new URL('http://example.com'), 2),
+                allSame
+            );
+
+            expect(actual).toBeDefined();
+            expect(actual.rawHash).toBe('1111');
         });
     });
 });

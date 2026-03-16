@@ -40,8 +40,19 @@ describe('HashSource', () => {
         it('should be calculate area.', () => {
             const hashSize = 5;
             const actual = new HashSource(new URL('http://example.com'), hashSize);
-            
+
             expect(actual.calculateArea()).toBe(30);
+        });
+    });
+
+    describe('default hashSize', () => {
+        it('should use default hashSize of 8 when not specified.', () => {
+            const actual = new HashSource(new URL('http://example.com'));
+
+            expect(actual.hashSize).toBe(8);
+            expect(actual.width).toBe(9);
+            expect(actual.height).toBe(8);
+            expect(actual.calculateArea()).toBe(72);
         });
     });
 });

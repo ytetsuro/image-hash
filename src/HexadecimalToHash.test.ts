@@ -11,5 +11,21 @@ describe('HaxadecimalToHash', () => {
         expect(() => {
             HexadecimalToHash('foobar');
         }).toThrowError('Not hexadecimal.');
-    })
+    });
+
+    it('should throw TypeError when arguments is empty string.', () => {
+        expect(() => {
+            HexadecimalToHash('');
+        }).toThrowError('Not hexadecimal.');
+    });
+
+    it('should get Hash when arguments is uppercase hexadecimal.', () => {
+        const actual = HexadecimalToHash('ABCDEF');
+        expect(String(actual)).toBe('abcdef');
+    });
+
+    it('should get Hash when arguments is single character.', () => {
+        const actual = HexadecimalToHash('f');
+        expect(String(actual)).toBe('f');
+    });
 });
