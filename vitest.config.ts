@@ -4,5 +4,6 @@ export default defineConfig({
   test: {
     globals: true,
     root: './src',
+    exclude: ['**/*.browser.test.ts', '**/node_modules/**'],
   },
 });

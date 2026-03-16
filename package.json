@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsup",
     "prepare": "npm run test && npm run build",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:browser": "vitest run --config vitest.browser.config.ts"
   },
   "keywords": [
     "image",
@@ -38,7 +39,10 @@
     "@types/decimal.js": "^7.4.0",
     "@types/jsdom": "^16.2.4",
     "@types/node": "^20.0.0",
+    "@vitest/browser": "^4.1.0",
+    "@vitest/browser-playwright": "^4.1.0",
     "jsdom": "^16.4.0",
+    "playwright": "^1.41.2",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0"
