@@ -1,11 +1,9 @@
 import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
+import path from 'path';
 
 export default defineConfig({
-  publicDir: '/workspaces/image-hash/fixtures',
-  server: {
-    host: '0.0.0.0',
-  },
+  publicDir: path.resolve(__dirname, 'fixtures'),
   test: {
     globals: true,
     root: './src',
@@ -13,7 +11,11 @@ export default defineConfig({
     testTimeout: 30000,
     browser: {
       enabled: true,
-      provider: playwright(),
+      provider: playwright({
+        launchOptions: {
+          args: ['--no-sandbox'],
+        },
+      }),
       instances: [
         { browser: 'chromium' },
       ],

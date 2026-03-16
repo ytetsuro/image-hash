@@ -22,7 +22,7 @@
   "author": "ytetsuro",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:ytetsuro/image-hash.git"
+    "url": "https://github.com/ytetsuro/image-hash.git"
   },
   "bugs": {
     "url": "https://github.com/ytetsuro/image-hash/issues"
@@ -42,7 +42,7 @@
     "@vitest/browser": "^4.1.0",
     "@vitest/browser-playwright": "^4.1.0",
     "jsdom": "^16.4.0",
-    "playwright": "^1.41.2",
+    "playwright": "^1.58.2",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0"
