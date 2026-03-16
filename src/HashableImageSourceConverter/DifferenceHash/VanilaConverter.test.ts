@@ -1,4 +1,5 @@
 
+import type {Uint8} from '../../types/Uint8';
 import { JSDOM, DOMWindow } from 'jsdom'
 import VanilaConverter from './VanilaConverter';
 import HashSource from '../../HashSource';

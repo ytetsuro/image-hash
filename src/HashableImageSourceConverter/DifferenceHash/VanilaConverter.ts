@@ -1,3 +1,4 @@
+import type {Uint8} from '../../types/Uint8';
 import HashSource from '../../HashSource';
 import HashableImageSouceConverter from '../HashableImageSourceConverter';
 import Resizer from '../Resizer/Resizer';
