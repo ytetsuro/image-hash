@@ -10,7 +10,7 @@ export default class Hash
         this.rawHash = rawHash;
     }
 
-    public getHammingDistance(hash: Hash)
+    public getHammingDistance(hash: this)
     {
         if (this.rawHash.length !== hash.rawHash.length) {
             throw new TypeError('Not equal to hash length.');
